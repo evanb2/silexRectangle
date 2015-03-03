@@ -5,10 +5,6 @@
     $app = new Silex\Application();
 
     $app->get("/", function() {
-        return "Homehjjhhj";
-    });
-
-    $app->get("/new_rectangle", function() {
         return "
         <!DOCTYPE html>
         <html>
@@ -20,7 +16,7 @@
             <div class='container'>
                 <h1>Geometry Checker</h1>
                 <p>Enter the dimensions of your rectangle to see if it's a square.</p>
-                <form action='/view_rectangle'>
+                <form action='view_rectangle'>
                     <div class='form-group'>
                         <label for='length'>Enter the length:</label>
                         <input id='length' name='length' class='form-control' type='number'>
@@ -44,7 +40,7 @@
             return "<h1>Congratulation! You made a square! Its are is $area.</h1>";
         } else {
             return "<h1>Sorry! This isn't a square. Its area is $area.</h1>";
-        }    
+        }
     });
 
     return $app;
